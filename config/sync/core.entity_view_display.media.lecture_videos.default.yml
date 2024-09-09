@@ -1,0 +1,33 @@
+uuid: 20fa3659-454c-439b-bc60-f38c20a3d2d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.lecture_videos.field_media_video_file_1
+    - media.type.lecture_videos
+  module:
+    - file
+id: media.lecture_videos.default
+targetEntityType: media
+bundle: lecture_videos
+mode: default
+content:
+  field_media_video_file_1:
+    type: file_video
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+      muted: false
+      width: 640
+      height: 480
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

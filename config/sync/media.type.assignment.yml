@@ -1,0 +1,13 @@
+uuid: 2703f1be-c868-440f-89ff-124637f5c044
+langcode: en
+status: true
+dependencies: {  }
+id: assignment
+label: assignment
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

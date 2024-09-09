@@ -1,0 +1,22 @@
+uuid: d7317c7b-4504-418a-814e-508a2221217a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lecture_video
+id: node.lecture_video.promote
+field_name: promote
+entity_type: node
+bundle: lecture_video
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

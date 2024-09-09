@@ -1,0 +1,23 @@
+uuid: 5e4ef3c2-b1bb-4659-835b-74934118a094
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_passing_year
+  module:
+    - user
+    - yearonly
+id: user.user.field_passing_year
+field_name: field_passing_year
+entity_type: user
+bundle: user
+label: passing_year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1900'
+  yearonly_to: '2074'
+field_type: yearonly

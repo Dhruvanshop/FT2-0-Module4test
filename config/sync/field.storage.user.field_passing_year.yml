@@ -1,0 +1,19 @@
+uuid: 0b0653d4-2579-4b2b-9979-82e32eec2354
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+    - yearonly
+id: user.field_passing_year
+field_name: field_passing_year
+entity_type: user
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

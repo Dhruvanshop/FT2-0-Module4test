@@ -1,0 +1,34 @@
+uuid: bb8a0864-9f0a-459d-9603-525a2764144c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lecture_video.body
+    - field.field.node.lecture_video.field_subject
+    - field.field.node.lecture_video.field_video_file
+    - node.type.lecture_video
+  module:
+    - text
+    - user
+id: node.lecture_video.teaser
+targetEntityType: node
+bundle: lecture_video
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_subject: true
+  field_video_file: true

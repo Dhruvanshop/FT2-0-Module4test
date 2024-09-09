@@ -1,0 +1,19 @@
+uuid: 37c6f7e4-dc33-4706-b50c-41217162acce
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+    - yearonly
+id: user.field_joining_year
+field_name: field_joining_year
+entity_type: user
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

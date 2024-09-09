@@ -1,0 +1,18 @@
+uuid: b25cde12-7cee-4e0c-a388-469389cb74e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Assignment
+type: assignment
+description: "Assignment for students\r\n"
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

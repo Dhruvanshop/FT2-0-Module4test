@@ -1,0 +1,27 @@
+uuid: a751a1dd-27cf-4b23-a251-596083953d70
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.study_material.field_media_file_1
+    - media.type.study_material
+id: media.study_material.media_library
+targetEntityType: media
+bundle: study_material
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_file_1: true
+  path: true
+  status: true
+  uid: true

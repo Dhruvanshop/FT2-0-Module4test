@@ -1,0 +1,22 @@
+uuid: 4079eb53-a1d9-43ef-ae26-1c6a6e681e1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.study_material
+id: node.study_material.promote
+field_name: promote
+entity_type: node
+bundle: study_material
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

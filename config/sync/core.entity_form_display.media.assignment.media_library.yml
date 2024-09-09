@@ -1,0 +1,27 @@
+uuid: cdd54721-9397-4958-a04a-97e53ca90956
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.assignment.field_media_file
+    - media.type.assignment
+id: media.assignment.media_library
+targetEntityType: media
+bundle: assignment
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_file: true
+  path: true
+  status: true
+  uid: true
