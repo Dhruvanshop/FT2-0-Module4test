@@ -1,0 +1,32 @@
+<?php
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_cron().
+ */
+function graduated_student_cron() {
+  $current_date = new DrupalDateTime();
+
+  // Subtract 6 months from the current date.
+  $six_months = $current_date->modify('-6 months');
+
+  // Query to load all users with the "student" role where the passing year is older than 6 months.
+  $query = \Drupal::entityQuery('user')
+    ->condition('status', 1)  // Only active users.
+    ->condition('roles', 'student')  // Users with the "student" role.
+    ->condition('field_passing_year', $six_months->format('Y-m-d'), '<')
+    ->accessCheck(FALSE);  // Bypass access check.
+  
+  $uids = $query->execute();
+
+  // Load and delete each user account.
+  if (!empty($uids)) {
+    foreach ($uids as $uid) {
+      $user = User::load($uid);
+      if ($user) {
+        $user->delete();
+      }
+    }
+  }
+}

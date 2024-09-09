@@ -1,0 +1,18 @@
+uuid: 209a61f2-fc0b-474d-9db8-51f4a01c0009
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Notice
+type: notice
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

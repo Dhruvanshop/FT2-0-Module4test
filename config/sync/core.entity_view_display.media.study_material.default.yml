@@ -1,0 +1,27 @@
+uuid: 35c032fc-d32a-4f96-8c9f-a3737c4f40b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.study_material.field_media_file_1
+    - media.type.study_material
+  module:
+    - file
+id: media.study_material.default
+targetEntityType: media
+bundle: study_material
+mode: default
+content:
+  field_media_file_1:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

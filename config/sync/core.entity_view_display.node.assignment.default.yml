@@ -1,0 +1,47 @@
+uuid: 72ad66b0-a509-45db-83a8-bebb76888545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.assignment.body
+    - field.field.node.assignment.field_assignment_file
+    - field.field.node.assignment.field_subject
+    - node.type.assignment
+  module:
+    - text
+    - user
+id: node.assignment.default
+targetEntityType: node
+bundle: assignment
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_assignment_file:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_subject:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

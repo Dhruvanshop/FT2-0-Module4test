@@ -1,0 +1,20 @@
+uuid: e8051ff8-8ee7-4c7a-928c-ef56482f96e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - user
+id: user.field_joining_year
+field_name: field_joining_year
+entity_type: user
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

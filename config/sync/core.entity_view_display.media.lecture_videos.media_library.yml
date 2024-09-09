@@ -1,0 +1,32 @@
+uuid: d12238c8-dc40-4519-b210-c6c79630138c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.lecture_videos.field_media_video_file_1
+    - image.style.medium
+    - media.type.lecture_videos
+  module:
+    - image
+id: media.lecture_videos.media_library
+targetEntityType: media
+bundle: lecture_videos
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_video_file_1: true
+  name: true
+  uid: true

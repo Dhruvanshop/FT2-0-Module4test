@@ -1,0 +1,27 @@
+uuid: 4f3c1009-e556-4f56-a4da-b59cfcfdf69c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.lecture_videos.field_media_video_file_1
+    - media.type.lecture_videos
+id: media.lecture_videos.media_library
+targetEntityType: media
+bundle: lecture_videos
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_video_file_1: true
+  path: true
+  status: true
+  uid: true

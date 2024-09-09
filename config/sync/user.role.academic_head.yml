@@ -1,0 +1,63 @@
+uuid: 2647dcd8-6e0b-4bda-811d-2a48f8465dfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.assignment
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.lecture_videos
+    - media.type.remote_video
+    - media.type.study_material
+    - media.type.video
+    - node.type.assignment
+    - node.type.lecture_video
+    - node.type.study_material
+  module:
+    - media
+    - node
+id: academic_head
+label: 'Academic Head'
+weight: 5
+is_admin: false
+permissions:
+  - 'create assignment content'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create lecture_video content'
+  - 'create lecture_videos media'
+  - 'create study_material content'
+  - 'create study_material media'
+  - 'create video media'
+  - 'delete own assignment content'
+  - 'delete own assignment media'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own lecture_video content'
+  - 'delete own lecture_videos media'
+  - 'delete own remote_video media'
+  - 'delete own study_material content'
+  - 'delete own study_material media'
+  - 'delete own video media'
+  - 'edit any audio media'
+  - 'edit own assignment content'
+  - 'edit own assignment media'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own lecture_video content'
+  - 'edit own lecture_videos media'
+  - 'edit own remote_video media'
+  - 'edit own study_material content'
+  - 'edit own study_material media'
+  - 'edit own video media'
+  - 'view any assignment media revisions'
+  - 'view any audio media revisions'
+  - 'view any document media revisions'
+  - 'view any image media revisions'
+  - 'view any lecture_videos media revisions'
+  - 'view any study_material media revisions'
+  - 'view any video media revisions'

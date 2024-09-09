@@ -1,0 +1,6 @@
+services:
+  expose_student_data.student_api_controller:
+    class: Drupal\expose_student_data\Controller\StudentApiController
+    arguments: ['@entity_type.manager', '@request_stack']
+    tags:
+      - { name: controller.service_arguments }

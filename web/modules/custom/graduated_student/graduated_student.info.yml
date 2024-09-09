@@ -1,0 +1,7 @@
+name: 'Graduated Student Cleanup'
+type: module
+description: 'Deletes student records whose graduation date is older than 6 months.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:user

@@ -1,0 +1,24 @@
+uuid: 197da548-5471-4207-8ab7-2a1ae7770f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.lecture_video
+  module:
+    - text
+id: node.lecture_video.body
+field_name: body
+entity_type: node
+bundle: lecture_video
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

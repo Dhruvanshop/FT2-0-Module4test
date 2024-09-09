@@ -1,0 +1,29 @@
+uuid: 46b8a690-5705-4e7d-8ae9-cf064f7ecb59
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.active_student
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__active_student_block_1
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:active_student-block_1'
+settings:
+  id: 'views_block:active_student-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
