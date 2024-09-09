@@ -111,14 +111,14 @@ class StudentSignupForm extends FormBase {
     ];
 
     $form['joining_year'] = [
-      '#type' => 'number',
+      '#type' => 'date',
       '#title' => $this->t('Joining Year'),
       '#required' => TRUE,
 
     ];
 
     $form['passing_year'] = [
-      '#type' => 'number',
+      '#type' => 'date',
       '#title' => $this->t('Passing Year'),
       '#required' => TRUE,
     ];

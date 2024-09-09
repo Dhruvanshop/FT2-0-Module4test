@@ -1,0 +1,7 @@
+name: 'Expose student data'
+type: module
+description: 'Exposes an API for the student data registerd on the university portal'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:node

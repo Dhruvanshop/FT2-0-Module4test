@@ -2,8 +2,8 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 1d029215-a0b5-44ba-9e7e-60a4adfef993
-name: 'Drush Site-Install'
-mail: admin@example.com
+name: 'student portal'
+mail: dhruv040403@gmail.com
 slogan: ''
 page:
   403: /node/7

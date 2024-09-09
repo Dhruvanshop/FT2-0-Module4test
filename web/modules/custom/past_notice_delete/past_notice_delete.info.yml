@@ -1,0 +1,7 @@
+name: 'Past Notice Delete'
+type: module
+description: 'A module to delete notices with past event dates via cron.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:node

@@ -1,16 +1,17 @@
-uuid: 37c6f7e4-dc33-4706-b50c-41217162acce
+uuid: e8051ff8-8ee7-4c7a-928c-ef56482f96e0
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - user
-    - yearonly
 id: user.field_joining_year
 field_name: field_joining_year
 entity_type: user
-type: yearonly
-settings: {  }
-module: yearonly
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

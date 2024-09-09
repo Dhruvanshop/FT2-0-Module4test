@@ -1,0 +1,47 @@
+<?php
+
+use Drupal\Core\Datetime\DateFormatterInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_cron().
+ */
+function past_notice_delete_cron() {
+  $current_time = \Drupal::time()->getRequestTime();
+  $date_formatter = \Drupal::service('date.formatter');
+  $current_date = $date_formatter->format($current_time, 'custom', 'Y-m-d');
+
+  \Drupal::logger('past_notice_delete')->notice('Current date: @date', ['@date' => $current_date]);
+
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $query = $node_storage->getQuery();
+
+  $query->condition('type', 'notice');
+  $query->condition('field_event_date', $current_date, '<');
+  $query->condition('status', 1);
+  $query->accessCheck(FALSE);
+
+  $nids = $query->execute();
+
+  \Drupal::logger('past_notice_delete')->notice('Found notices to delete: @count', ['@count' => count($nids)]);
+
+  if (!empty($nids)) {
+    $nodes = $node_storage->loadMultiple($nids);
+
+    foreach ($nodes as $node) {
+      try {
+        $node->delete();
+        \Drupal::logger('past_notice_delete')->notice('Deleted notice with ID: @nid', ['@nid' => $node->id()]);
+      }
+      catch (\Exception $e) {
+        \Drupal::logger('past_notice_delete')->error('Failed to delete notice with ID: @nid. Error: @error', [
+          '@nid' => $node->id(),
+          '@error' => $e->getMessage(),
+        ]);
+      }
+    }
+  }
+  else {
+    \Drupal::logger('past_notice_delete')->notice('No notices found to delete.');
+  }
+}

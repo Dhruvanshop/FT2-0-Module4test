@@ -19,10 +19,12 @@ module:
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
+  expose_student_data: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  graduated_student: 0
   help: 0
   history: 0
   image: 0
@@ -36,6 +38,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  past_notice_delete: 0
   path: 0
   path_alias: 0
   search: 0

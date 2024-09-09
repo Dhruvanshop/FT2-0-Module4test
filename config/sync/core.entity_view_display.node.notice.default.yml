@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.notice.body
+    - field.field.node.notice.field_event_date
     - node.type.notice
   module:
+    - datetime
     - text
     - user
 id: node.notice.default
@@ -19,6 +21,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_event_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

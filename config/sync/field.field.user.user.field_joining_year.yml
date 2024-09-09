@@ -1,12 +1,12 @@
-uuid: 2bd7254d-122a-4d47-a080-123a5fb7a411
+uuid: cdbff5c6-39a9-4eed-8ee1-6beb135c66ea
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.user.field_joining_year
   module:
+    - datetime
     - user
-    - yearonly
 id: user.user.field_joining_year
 field_name: field_joining_year
 entity_type: user
@@ -17,7 +17,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  yearonly_from: '1900'
-  yearonly_to: '2074'
-field_type: yearonly
+settings: {  }
+field_type: datetime

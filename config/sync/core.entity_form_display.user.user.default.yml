@@ -10,9 +10,9 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - datetime
     - image
     - user
-    - yearonly
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
 id: user.user.default
@@ -27,11 +27,10 @@ content:
     weight: 5
     region: content
   field_joining_year:
-    type: yearonly_default
-    weight: 9
+    type: datetime_default
+    weight: 13
     region: content
-    settings:
-      sort_order: asc
+    settings: {  }
     third_party_settings: {  }
   field_mobile_number:
     type: number
@@ -41,11 +40,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_passing_year:
-    type: yearonly_default
-    weight: 10
+    type: datetime_default
+    weight: 12
     region: content
-    settings:
-      sort_order: asc
+    settings: {  }
     third_party_settings: {  }
   field_stream:
     type: entity_reference_autocomplete
